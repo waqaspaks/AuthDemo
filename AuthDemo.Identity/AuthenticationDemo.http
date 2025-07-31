@@ -1,0 +1,14 @@
+@hostname=https://localhost:7214
+
+### Get Access Token using Client Credentials
+POST {{hostname}}/connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&client_id=client_app
+&client_secret=client_secret
+&scope=api
+
+### Test Protected API Endpoint (Replace {access_token} with the token received from above request)
+GET {{hostname}}/api/test
+Authorization: Bearer {access_token}
