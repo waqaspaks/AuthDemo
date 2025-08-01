@@ -8,6 +8,13 @@ namespace AuthDemo.Services;
 
 public static class SeedData
 {
+    /// <summary>
+    /// Seeds the client credentials (ClientId and ClientSecret) for API access.
+    /// These credentials are used by client applications to authenticate and obtain tokens
+    /// for accessing the secured APIs.
+    /// </summary>
+    /// <param name="serviceProvider"></param>
+    /// <returns></returns>
     public static async Task InitializeAsync(IServiceProvider serviceProvider)
     {
         var context = serviceProvider.GetRequiredService<ApplicationDbContext>();
@@ -15,14 +22,14 @@ public static class SeedData
 
         var manager = serviceProvider.GetRequiredService<IOpenIddictApplicationManager>();
 
-        // Register the API client
-        if (await manager.FindByClientIdAsync("client_app") is null)
+        // Register the transport_client_app
+        if (await manager.FindByClientIdAsync("transport_client_app") is null)
         {
             await manager.CreateAsync(new OpenIddictApplicationDescriptor
             {
-                ClientId = "client_app",
-                ClientSecret = "client_app_secret",
-                DisplayName = "API Client Application",
+                ClientId = "transport_client_app",
+                ClientSecret = "transport_client_app_secret",
+                DisplayName = "Transport Client Application",
                 RedirectUris = { new Uri("https://localhost:8081/callback") },
                 PostLogoutRedirectUris = { new Uri("https://localhost:8081/") },
                 Permissions =
@@ -38,21 +45,21 @@ public static class SeedData
                     Permissions.Scopes.Roles,
                     Permissions.Endpoints.Token,
                     Permissions.GrantTypes.ClientCredentials,
-                    Permissions.Prefixes.Scope + "admin.api",
-                    Permissions.Prefixes.Scope + "manager.api",
-                    Permissions.Prefixes.Scope + "user.api"
+                    Permissions.Prefixes.Scope + "admin.transport.api",
+                    Permissions.Prefixes.Scope + "manager.transport.api",
+                    Permissions.Prefixes.Scope + "user.transport.api"
                 }
             });
         }
 
         // Register the Blazor client
-        if (await manager.FindByClientIdAsync("blazor_client") is null)
+        if (await manager.FindByClientIdAsync("sports_client_app") is null)
         {
             await manager.CreateAsync(new OpenIddictApplicationDescriptor
             {
-                ClientId = "blazor_client",
-                ClientSecret = "blazor_client_secret",
-                DisplayName = "Blazor Web Application",
+                ClientId = "sports_client_app",
+                ClientSecret = "sports_client_app_secret",
+                DisplayName = "Sports Client Application",
                 RedirectUris = { new Uri("https://localhost:7071/callback") },
                 PostLogoutRedirectUris = { new Uri("https://localhost:7071/") },
                 Permissions =
@@ -68,14 +75,21 @@ public static class SeedData
                     Permissions.Scopes.Roles,
                     Permissions.Endpoints.Token,
                     Permissions.GrantTypes.ClientCredentials,
-                    Permissions.Prefixes.Scope + "admin.api",
-                    Permissions.Prefixes.Scope + "manager.api",
-                    Permissions.Prefixes.Scope + "user.api"
+                    Permissions.Prefixes.Scope + "admin.sports.api",
+                    Permissions.Prefixes.Scope + "manager.sports.api",
+                    Permissions.Prefixes.Scope + "user.sports.api"
                 }
             });
         }
     }
 
+    /// <summary>
+    /// Seeds the default users and roles into the database.
+    /// These users and roles are used to define initial access levels and permissions
+    /// required for authenticating and authorizing API requests.
+    /// </summary>
+    /// <param name="serviceProvider"></param>
+    /// <returns></returns>
     public static async Task SeedRolesAndUsers(IServiceProvider serviceProvider)
     {
         var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();

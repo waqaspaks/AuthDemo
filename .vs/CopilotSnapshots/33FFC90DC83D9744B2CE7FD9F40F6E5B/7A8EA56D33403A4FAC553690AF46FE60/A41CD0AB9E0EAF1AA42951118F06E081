@@ -1,0 +1,210 @@
+﻿# AuthDemo Solution
+
+## Overview
+AuthDemo is a comprehensive .NET 8 solution demonstrating modern authentication and authorization patterns using OpenIddict and ASP.NET Core Identity. The solution includes multiple projects showcasing secure communication between client applications and protected API services.
+
+## Project Structure
+The solution consists of the following projects:
+
+---
+
+### AuthDemo.Blazor
+**Type:** Blazor Web Application (.NET 8)
+
+**Purpose:**  
+Provides a modern, interactive web UI for users to authenticate, view data, and interact with secure APIs.
+
+**Features:**  
+- Implements JWT token authentication via OpenIddict.
+- Communicates with protected API endpoints.
+- Demonstrates role-based UI and access control.
+
+**Setup & Usage:**  
+1. Ensure the Identity server is running.
+2. Configure API and Identity endpoints in `appsettings.json`.
+3. Run the project using Visual Studio or `dotnet run`.
+4. Access the app in your browser and log in using valid credentials.
+
+---
+
+### AuthDemo.Razor
+**Type:** Razor Web Application (.NET 8)
+
+**Purpose:**  
+Alternative web client focused on flight scheduling and demonstrating token-based authentication.
+
+**Features:**  
+- Flight schedule interface using shared models.
+- Token acquisition and API calls to protected endpoints.
+- Error handling and status display.
+
+**Setup & Usage:**  
+1. Update API endpoint URLs in configuration.
+2. Run the project and authenticate via the Identity server.
+3. Use the flight scheduling page to view and interact with flight data.
+
+---
+
+### AuthDemo.Identity
+**Type:** ASP.NET Core Web API (.NET 8)
+
+**Purpose:**  
+Acts as the authentication and authorization server for the solution.
+
+**Features:**  
+- ASP.NET Core Identity for user and role management.
+- OpenIddict for OAuth2/OpenID Connect flows.
+- Issues JWT tokens with scopes and claims.
+- Provides endpoints for token issuance, user registration, and role assignment.
+
+**Setup & Usage:**  
+1. Configure SQL Server connection string in `appsettings.json`.
+2. Apply database migrations (`dotnet ef database update`).
+3. Run the project to start the Identity server.
+4. Register users and assign roles as needed.
+
+---
+
+### AuthDemo.SecureDemoApi
+**Type:** ASP.NET Core Web API (.NET 8)
+
+**Purpose:**  
+Provides secure API endpoints for authenticated and authorized users.
+
+**Features:**  
+- Role-based access control using OpenIddict scopes.
+- Example endpoints for testing authentication and authorization.
+- Integration with shared models.
+
+**Setup & Usage:**  
+1. Ensure Identity server is running and accessible.
+2. Configure token validation settings in `appsettings.json`.
+3. Run the project and access endpoints using a valid JWT token.
+
+---
+
+### AuthDemo.MockApiService
+**Type:** ASP.NET Core Web API (.NET 8)
+
+**Purpose:**  
+Demonstrates a mock API service with protected endpoints.
+
+**Features:**  
+- Weather forecast endpoint secured by OpenIddict.
+- Example of scope-based authorization (`AdminScope`).
+- Logging and claim inspection for demonstration.
+
+**Setup & Usage:**  
+1. Configure token validation and API settings.
+2. Run the project and call endpoints with a valid token.
+
+---
+
+### AuthDemo.Shared
+**Type:** .NET Class Library
+
+**Purpose:**  
+Contains shared models, DTOs, and interfaces used across all projects.
+
+**Features:**  
+- Models for flight schedules, weather data, and user information.
+- DTOs for API communication.
+- Ensures consistency and reduces duplication.
+
+**Usage:**  
+- Referenced by all client and API projects.
+- Update models here to propagate changes across the solution.
+
+---
+
+## Authentication & Authorization
+
+### Identity Framework
+- Built on ASP.NET Core Identity.
+- OpenIddict integration for OAuth 2.0 and OpenID Connect.
+- JWT token-based authentication.
+
+### Available Scopes
+- `admin.api`: Full administrative access.
+- `manager.api`: Management level access.
+- `user.api`: Basic user access.
+
+### Authentication Flow
+1. User authenticates via Identity service.
+2. JWT token issued with appropriate scopes.
+3. Token used for subsequent API calls.
+4. API endpoints validate token and scopes.
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+- .NET 8 SDK
+- SQL Server (LocalDB or full instance)
+- Visual Studio 2022 or VS Code
+
+### Development Setup
+1. Clone the repository.
+2. Update connection strings in `appsettings.json` for each project.
+3. Apply database migrations for Identity (`dotnet ef database update`).
+4. Run the Identity server, then start client and API projects as needed.
+
+---
+
+## API Documentation
+
+### Identity Service Endpoints
+- `POST /connect/token` - Token generation
+- `GET /connect/authorize` - Authorization endpoint
+- `POST /connect/logout` - Logout endpoint
+
+### Secure API Endpoints
+- `GET /api/test` - Protected test endpoint (requires manager scope)
+- `GET /api/weatherforecast` - Weather data (requires admin scope)
+- `GET /api/flight` - Flight schedules (requires user scope)
+
+---
+
+## Deployment Guidelines
+
+### Production Configuration
+- Update connection strings for production environment.
+- Configure SSL certificates.
+- Set secure password policies.
+- Configure CORS policies.
+
+### Deployment Steps
+1. Publish each project using `dotnet publish`.
+2. Deploy to your chosen hosting environment.
+3. Configure environment variables and production settings.
+
+---
+
+## Security Considerations
+- Use HTTPS in production.
+- Secure connection strings and secrets.
+- Implement proper logging and monitoring.
+- Regularly update dependencies.
+
+---
+
+## Contributing
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit changes.
+4. Open a pull request.
+
+---
+
+## License
+MIT License
+
+---
+
+## Support
+For support, open an issue in the repository or contact the development team.
+
+---
+
+**Note:** This is a demonstration project. Review and enhance security before using in production.
