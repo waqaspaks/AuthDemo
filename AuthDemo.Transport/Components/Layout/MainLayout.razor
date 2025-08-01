@@ -1,0 +1,60 @@
+﻿@inherits LayoutComponentBase
+@implements IDisposable
+@using AuthDemo.Transport.Services
+@using System.Security.Claims
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <AuthorizeView>
+                <Authorized Context="auth">
+                    
+                    <span class="nav-link text-dark">@auth.User.Identity?.Name</span>
+                    <LogoutButton />
+
+                </Authorized>
+                <NotAuthorized>
+                    <span class="nav-link text-dark"></span>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+@code {
+    [Inject]
+    private LoginService LoginServices { get; set; }
+
+    [Inject]
+    private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+    protected override void OnInitialized()
+    {
+        AuthenticationStateProvider.AuthenticationStateChanged += OnAuthenticationStateChanged;
+    }
+
+    private void OnAuthenticationStateChanged(Task<AuthenticationState> task)
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        AuthenticationStateProvider.AuthenticationStateChanged -= OnAuthenticationStateChanged;
+    }
+
+}

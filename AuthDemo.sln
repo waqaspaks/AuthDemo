@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.Identity", "AuthDemo.Identity\AuthDemo.Identity.csproj", "{70DAB2F3-97C6-DFA1-4CD1-47ACDEB72456}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1} = {EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.Sports", "AuthDemo.Sports\AuthDemo.Sports.csproj", "{5262C937-7916-4114-17F2-43A9E57A37D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1} = {EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.SportsApi", "AuthDemo.SportsApi\AuthDemo.SportsApi.csproj", "{22E81369-3018-3B44-52CE-E436FBA52EF5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1} = {EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.Shared", "AuthDemo.Shared\AuthDemo.Shared.csproj", "{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.TransportApi", "AuthDemo.TransportApi\AuthDemo.TransportApi.csproj", "{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.Transport", "AuthDemo.Transport\AuthDemo.Transport.csproj", "{3E2014C3-0640-CB3B-651C-A3F310514911}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70DAB2F3-97C6-DFA1-4CD1-47ACDEB72456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DAB2F3-97C6-DFA1-4CD1-47ACDEB72456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DAB2F3-97C6-DFA1-4CD1-47ACDEB72456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DAB2F3-97C6-DFA1-4CD1-47ACDEB72456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5262C937-7916-4114-17F2-43A9E57A37D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5262C937-7916-4114-17F2-43A9E57A37D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5262C937-7916-4114-17F2-43A9E57A37D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5262C937-7916-4114-17F2-43A9E57A37D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E81369-3018-3B44-52CE-E436FBA52EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E81369-3018-3B44-52CE-E436FBA52EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E81369-3018-3B44-52CE-E436FBA52EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E81369-3018-3B44-52CE-E436FBA52EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF40CA7F-52EE-478E-8593-F4ABA7F0DED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E2014C3-0640-CB3B-651C-A3F310514911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2014C3-0640-CB3B-651C-A3F310514911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2014C3-0640-CB3B-651C-A3F310514911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2014C3-0640-CB3B-651C-A3F310514911}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E15B5643-33CD-4DA7-A53D-B6EC1BA3518A}
+	EndGlobalSection
+EndGlobal

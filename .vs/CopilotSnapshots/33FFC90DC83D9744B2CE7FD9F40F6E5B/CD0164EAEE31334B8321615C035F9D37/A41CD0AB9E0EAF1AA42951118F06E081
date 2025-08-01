@@ -1,0 +1,69 @@
+﻿# AuthDemo Solution
+
+## Overview
+AuthDemo is a comprehensive .NET 8 solution demonstrating modern authentication and authorization patterns using OpenIddict and ASP.NET Core Identity. The solution includes multiple projects showcasing secure communication between client applications and protected API services.
+
+## Project Structure
+The solution consists of the following projects:
+
+### Client Applications
+- **AuthDemo.Blazor** (.NET 8)
+  - Modern Blazor web application
+  - Uses JWT token authentication
+  - Communicates with secure API endpoints
+
+- **AuthDemo.Razor** (.NET 8)
+  - Alternative Razor-based web application
+  - Implements flight scheduling interface
+  - Demonstrates token-based authentication
+
+### API Services
+- **AuthDemo.Identity** (.NET 8)
+  - OpenIddict authentication server
+  - ASP.NET Core Identity integration
+  - JWT token generation and validation
+  - User and role management
+
+- **AuthDemo.SecureDemoApi** (.NET 8)
+  - Protected API endpoints
+  - Role-based access control
+  - OpenIddict token validation
+
+- **AuthDemo.MockApiService** (.NET 8)
+  - Sample API implementation
+  - Weather forecast demo endpoint
+  - Secured with OpenIddict
+
+### Shared Components
+- **AuthDemo.Shared**
+  - Common models and DTOs
+  - Shared interfaces
+  - Cross-cutting concerns
+
+## Authentication & Authorization
+
+### Identity Framework
+- Built on ASP.NET Core Identity
+- OpenIddict integration for OAuth 2.0 and OpenID Connect
+- JWT token-based authentication
+
+### Available Scopes
+- `admin.api`: Full administrative access
+- `manager.api`: Management level access
+- `user.api`: Basic user access
+
+### Authentication Flow
+1. User authenticates via Identity service
+2. JWT token issued with appropriate scopes
+3. Token used for subsequent API calls
+4. API endpoints validate token and scopes
+
+## Setup Instructions
+
+### Prerequisites
+- .NET 8 SDK
+- SQL Server (LocalDB or full instance)
+- Visual Studio 2022 or VS Code
+
+### Development Setup
+1. Clone the repository

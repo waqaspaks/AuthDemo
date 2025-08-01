@@ -1,0 +1,27 @@
+[
+  {
+    "Name": "AuthDemo",
+    "Projects": [
+      {
+        "Path": "AuthDemo.Identity\\AuthDemo.Identity.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AuthDemo.Transport\\AuthDemo.Transport.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AuthDemo.Sports\\AuthDemo.Sports.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

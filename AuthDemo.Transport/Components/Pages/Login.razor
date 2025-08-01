@@ -1,0 +1,58 @@
+@page "/login"
+@using AuthDemo.Transport.Models
+@using AuthDemo.Transport.Services
+
+<h3>Login</h3>
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<EditForm Model="@model" OnValidSubmit="HandleLogin" FormName="login">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="email" class="form-control" @bind-Value="model.Email" @oninput="ClearError" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <InputText id="password" type="password" class="form-control" @bind-Value="model.Password" @oninput="ClearError" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" disabled="@isSubmitting">@((isSubmitting ? "Logging in..." : "Login"))</button>
+</EditForm>
+
+@if (isSubmitting)
+{
+    <div class="mt-2"><span class="spinner-border spinner-border-sm"></span> Logging in...</div>
+}
+
+@if (!string.IsNullOrEmpty(TokenHolder?.Token))
+{
+    <div class="mt-3">
+        <strong>Access Token (for debugging):</strong>
+        <textarea class="form-control" rows="6" readonly>@TokenHolder.Token</textarea>
+        <div class="text-muted">Copy and inspect at <a href="https://jwt.io" target="_blank">jwt.io</a></div>
+    </div>
+}
+
+@code {
+    [Inject] public TokenHolder TokenHolder { get; set; }
+    private bool isSubmitting = false;
+
+    private void ClearError(ChangeEventArgs e)
+    {
+        errorMessage = null;
+    }
+
+    private async Task HandleLogin()
+    {
+        isSubmitting = true;
+        errorMessage = await LoginService.HandleLogin(model);
+        isSubmitting = false;
+    }
+}

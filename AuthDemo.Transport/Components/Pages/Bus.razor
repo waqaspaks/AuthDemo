@@ -1,0 +1,67 @@
+@page "/bus"
+@using AuthDemo.Transport.Components.Layout
+@using AuthDemo.Shared.Models
+@inject AuthDemo.Transport.Services.BusService BusService
+@inject AuthDemo.Transport.Services.TokenHolder TokenHolder
+
+<h3>Bus Schedules</h3>
+@if (buses == null)
+{
+    <p><em>Loading...</em></p>
+    @if (errorMessage != null)
+    {
+        <div class="alert alert-danger">@errorMessage</div>
+    }
+}
+else if (errorMessage != null)
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Bus Number</th>
+                <th>Company</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Arival Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bus in buses)
+            {
+                <tr>
+                    <td>@bus.BusNumber</td>
+                    <td>@bus.Company</td>
+                    <td>@bus.Origin</td>
+                    <td>@bus.Destination</td>
+                    <td>@bus.DepartureTime.ToShortTimeString()</td>
+                    <td>@bus.ArrivalTime.ToShortTimeString()</td>
+                    <td>@bus.Direction (@bus.Status)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<BusSchedule>? buses;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var token = TokenHolder.Token;
+            buses = await BusService.GetBusAsync(token);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading weather data: {ex.Message}";
+        }
+    }
+}

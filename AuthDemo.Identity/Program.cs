@@ -6,36 +6,48 @@ using static OpenIddict.Abstractions.OpenIddictConstants;
 
 var builder = WebApplication.CreateBuilder(args);
 
+/// <summary>
+/// Adds controller support for handling API endpoints.
+/// </summary>
 builder.Services.AddControllers();
+
+/// <summary>
+/// Adds Swagger/OpenAPI for API documentation and testing.
+/// </summary>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
         Version = "v1",
-        Title = "Identity",
-        Description = "API for Auth Demo with OpenIddict and JWT support"
+        Title = "Identity API",
+        Description = "API for Auth Demo with OpenIddict and JWT authentication support"
     });
 
-    // Enable XML comments if available
+    // Include XML documentation if available (for better Swagger descriptions).
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlFile);
-    if (System.IO.File.Exists(xmlPath))
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    if (File.Exists(xmlPath))
     {
         options.IncludeXmlComments(xmlPath);
     }
 });
 
-// Add DbContext
+/// <summary>
+/// Configures Entity Framework Core to use SQL Server and registers OpenIddict support.
+/// </summary>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-    options.UseOpenIddict();
+    options.UseOpenIddict(); // Enables OpenIddict integration with EF Core
 });
 
-// Add Identity
+/// <summary>
+/// Configures ASP.NET Identity for user and role management.
+/// </summary>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
+    // Password policy settings
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;
     options.Password.RequireUppercase = true;
@@ -45,47 +57,55 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
 
-// Configure OpenIddict
+/// <summary>
+/// Defines authorization policies based on user scopes.
+/// These policies ensure access control based on assigned scopes in the JWT.
+/// </summary>
 builder.Services.AddAuthorization(options =>
 {
-    //options.AddPolicy("ApiScope", policy =>
-    //{
-    //    policy.RequireAuthenticatedUser();
-    //    policy.RequireAssertion(context =>
-    //        context.User.HasClaim(c => c.Type == "scope" &&
-    //            (c.Value == "api" || c.Value.Split(' ').Contains("api"))));
-    //});
+    // Policy to check for email scope
     options.AddPolicy("EmailScope", policy =>
     {
         policy.RequireAuthenticatedUser();
         policy.RequireClaim(Claims.Scope, Scopes.Email);
     });
+
+    // Policy to check for admin access to transport or sports APIs
     options.AddPolicy("AdminScope", policy =>
     {
         policy.RequireAuthenticatedUser();
         policy.RequireAssertion(context =>
-            context.User.HasClaim("scope", "admin.demo.api") ||
-            context.User.HasClaim("scope", "admin.mock.api")
+            context.User.HasClaim("scope", "admin.transport.api") ||
+            context.User.HasClaim("scope", "admin.sports.api")
         );
     });
 
+    // Policy to check for manager access to transport or sports APIs
     options.AddPolicy("ManagerScope", policy =>
     {
         policy.RequireAuthenticatedUser();
         policy.RequireAssertion(context =>
-            context.User.HasClaim("scope", "manager.demo.api") ||
-            context.User.HasClaim("scope", "manager.mock.api")
+            context.User.HasClaim("scope", "manager.transport.api") ||
+            context.User.HasClaim("scope", "manager.sports.api")
         );
     });
 
+    // Policy to check for user access to transport API
     options.AddPolicy("UserScope", policy =>
     {
         policy.RequireAuthenticatedUser();
-        policy.RequireScope("user.demo.api");
+        policy.RequireScope("user.transport.api");
     });
 });
+
+/// <summary>
+/// Configures authentication to use OpenIddict validation scheme.
+/// </summary>
 builder.Services.AddAuthentication(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme);
 
+/// <summary>
+/// Configures OpenIddict for issuing and validating tokens.
+/// </summary>
 builder.Services.AddOpenIddict()
     .AddCore(options =>
     {
@@ -94,38 +114,39 @@ builder.Services.AddOpenIddict()
     })
     .AddServer(options =>
     {
+        // Token & authorization endpoint URIs
         options.SetTokenEndpointUris("/connect/token")
                .SetAuthorizationEndpointUris("/connect/authorize");
 
-        // Userinfo endpoint is not available in v7 by default. Remove or implement manually if needed.
+        // Set the issuer (must match the API URL)
         options.SetIssuer("https://localhost:7214/");
+
+        // Allowed authentication flows
         options.AllowPasswordFlow()
                .AllowClientCredentialsFlow()
                .AllowAuthorizationCodeFlow()
                .AllowRefreshTokenFlow();
 
-        options.RegisterScopes("admin.demo.api", "manager.demo.api", "admin.mock.api", "manager.mock.api", "user.demo.api");
-        options.RegisterAudiences("DemoApi", "MockApi");
+        // Register available scopes for APIs
+        options.RegisterScopes("admin.transport.api", "manager.transport.api", "admin.sports.api", "manager.sports.api", "user.transport.api");
 
+        // Register API audiences for JWT validation
+        options.RegisterAudiences("TransportApi", "SportsApi");
+
+        // Add development certificates (for signing and encryption)
         options.AddDevelopmentEncryptionCertificate()
                .AddDevelopmentSigningCertificate()
                .DisableAccessTokenEncryption();
 
-
+        // Enable ASP.NET Core endpoint integration
         options.UseAspNetCore()
                .EnableTokenEndpointPassthrough()
                .EnableAuthorizationEndpointPassthrough();
-
-        options.UseAspNetCore();
     });
-    //.AddValidation(options =>
-    //{
-    //    var issuer = builder.Configuration["OpenIddict:Issuer"];
-    //    options.SetIssuer("https://localhost:7214/"); // Must match token issuer
-    //    options.UseLocalServer();
-    //    options.UseAspNetCore();
-    //});
 
+/// <summary>
+/// Adds CORS policy to allow requests from the Blazor client.
+/// </summary>
 builder.Services.AddCors(options =>
 {
     var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
@@ -138,19 +159,23 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-// Debug logging middleware for incoming JWTs
+
+/// <summary>
+/// Middleware to log JWT authentication details for debugging.
+/// </summary>
 app.Use(async (context, next) =>
 {
     var authHeader = context.Request.Headers["Authorization"].FirstOrDefault();
     if (!string.IsNullOrEmpty(authHeader))
     {
         Console.WriteLine($"Authorization header: {authHeader}");
+
         if (context.User?.Identity?.IsAuthenticated == true)
         {
             Console.WriteLine($"User authenticated: {context.User.Identity.Name}");
-            foreach (var claim1 in context.User.Claims)
+            foreach (var claim in context.User.Claims)
             {
-                Console.WriteLine($"Claim: {claim1.Type} = {claim1.Value}");
+                Console.WriteLine($"Claim: {claim.Type} = {claim.Value}");
             }
         }
         else
@@ -161,25 +186,36 @@ app.Use(async (context, next) =>
     await next();
 });
 
+/// <summary>
+/// Enables Swagger UI in Development mode.
+/// </summary>
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+/// <summary>
+/// Middleware pipeline setup.
+/// </summary>
 app.UseHttpsRedirection();
-
 app.UseCors("AllowBlazorClient");
-
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Health check endpoint
+/// <summary>
+/// Health check endpoint to verify the API is running.
+/// </summary>
 app.MapGet("/", () => "Auth API is running");
 
+/// <summary>
+/// Maps all controller endpoints.
+/// </summary>
 app.MapControllers();
 
-// Initialize the database with seed data
+/// <summary>
+/// Initializes the database with seed data (roles, users, etc.).
+/// </summary>
 using (var scope = app.Services.CreateScope())
 {
     await AuthDemo.Services.SeedData.InitializeAsync(scope.ServiceProvider);

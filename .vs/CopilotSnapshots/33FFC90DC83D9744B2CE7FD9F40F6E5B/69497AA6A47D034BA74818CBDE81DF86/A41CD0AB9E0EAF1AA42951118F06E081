@@ -1,0 +1,27 @@
+﻿# AuthDemo Solution Documentation
+
+## Table of Contents
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [User Manual](#user-manual)
+  - [Getting Started](#getting-started)
+  - [Authentication & Roles](#authentication--roles)
+  - [Using the Blazor Web App](#using-the-blazor-web-app)
+- [Technical Documentation](#technical-documentation)
+  - [Solution Architecture](#solution-architecture)
+  - [Identity & Authorization](#identity--authorization)
+  - [API Services](#api-services)
+  - [Shared Models](#shared-models)
+  - [Development & Deployment](#development--deployment)
+- [Contributing](#contributing)
+- [Support](#support)
+
+---
+
+## Overview
+
+AuthDemo is a multi-project solution built on .NET 8, featuring a Blazor web application, secure API services, and integrated authentication/authorization using ASP.NET Core Identity and OpenIddict. The solution demonstrates modern identity management, role-based access, and secure communication between client and server.
+
+---
+
+## Project Structure

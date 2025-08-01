@@ -1,0 +1,397 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\a\\AuthDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5262C937-7916-4114-17F2-43A9E57A37D8}|AuthDemo.Sports\\AuthDemo.Sports.csproj|d:\\a\\authdemo\\authdemo.sports\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5262C937-7916-4114-17F2-43A9E57A37D8}|AuthDemo.Sports\\AuthDemo.Sports.csproj|solutionrelative:authdemo.sports\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5262C937-7916-4114-17F2-43A9E57A37D8}|AuthDemo.Sports\\AuthDemo.Sports.csproj|d:\\a\\authdemo\\authdemo.sports\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5262C937-7916-4114-17F2-43A9E57A37D8}|AuthDemo.Sports\\AuthDemo.Sports.csproj|solutionrelative:authdemo.sports\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\a\\AuthDemo\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|d:\\a\\authdemo\\authdemo.transportapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|solutionrelative:authdemo.transportapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|d:\\a\\authdemo\\authdemo.transportapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|solutionrelative:authdemo.transportapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|d:\\a\\authdemo\\authdemo.transportapi\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|solutionrelative:authdemo.transportapi\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|d:\\a\\authdemo\\authdemo.transportapi\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|solutionrelative:authdemo.transportapi\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|d:\\a\\authdemo\\authdemo.transportapi\\controllers\\busschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32DFB3D4-E9E3-3B63-9871-E1D3E909C297}|AuthDemo.TransportApi\\AuthDemo.TransportApi.csproj|solutionrelative:authdemo.transportapi\\controllers\\busschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\services\\persistentauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\services\\persistentauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\services\\flightservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\services\\flightservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\services\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\services\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\services\\busservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\services\\busservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|d:\\a\\authdemo\\authdemo.transport\\helpers\\apiclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2014C3-0640-CB3B-651C-A3F310514911}|AuthDemo.Transport\\AuthDemo.Transport.csproj|solutionrelative:authdemo.transport\\helpers\\apiclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E81369-3018-3B44-52CE-E436FBA52EF5}|AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj|d:\\a\\authdemo\\authdemo.sportsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E81369-3018-3B44-52CE-E436FBA52EF5}|AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj|solutionrelative:authdemo.sportsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E81369-3018-3B44-52CE-E436FBA52EF5}|AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj|d:\\a\\authdemo\\authdemo.sportsapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E81369-3018-3B44-52CE-E436FBA52EF5}|AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj|solutionrelative:authdemo.sportsapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E81369-3018-3B44-52CE-E436FBA52EF5}|AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj|d:\\a\\authdemo\\authdemo.sportsapi\\controllers\\gamematchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E81369-3018-3B44-52CE-E436FBA52EF5}|AuthDemo.SportsApi\\AuthDemo.SportsApi.csproj|solutionrelative:authdemo.sportsapi\\controllers\\gamematchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Components\\App.razor",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Components\\App.razor",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Components\\App.razor",
+              "RelativeToolTip": "AuthDemo.Transport\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-01T05:21:54.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "AuthDemo.Transport\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-01T05:00:34.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Sports\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "AuthDemo.Sports\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Sports\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "AuthDemo.Sports\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-01T04:58:44.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Sports\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "AuthDemo.Sports\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Sports\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "AuthDemo.Sports\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-01T04:58:37.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "readme.md",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\readme.md",
+              "RelativeDocumentMoniker": "readme.md",
+              "ToolTip": "D:\\a\\AuthDemo\\readme.md",
+              "RelativeToolTip": "readme.md",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAnwHwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-07-31T21:47:17.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Program.cs",
+              "RelativeDocumentMoniker": "AuthDemo.TransportApi\\Program.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Program.cs",
+              "RelativeToolTip": "AuthDemo.TransportApi\\Program.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAgwMIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:35:26.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "AuthDemo.TransportApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "AuthDemo.TransportApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:35:01.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "AuthDemo.TransportApi\\Controllers\\TestController.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\TestController.cs",
+              "RelativeToolTip": "AuthDemo.TransportApi\\Controllers\\TestController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:34:39.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FlightController.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\FlightController.cs",
+              "RelativeDocumentMoniker": "AuthDemo.TransportApi\\Controllers\\FlightController.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\FlightController.cs",
+              "RelativeToolTip": "AuthDemo.TransportApi\\Controllers\\FlightController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAgwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:34:13.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BusScheduleController.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\BusScheduleController.cs",
+              "RelativeDocumentMoniker": "AuthDemo.TransportApi\\Controllers\\BusScheduleController.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.TransportApi\\Controllers\\BusScheduleController.cs",
+              "RelativeToolTip": "AuthDemo.TransportApi\\Controllers\\BusScheduleController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAgwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:33:32.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Program.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Program.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Program.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Program.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAgwK4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:32:29.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PersistentAuthenticationStateProvider.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\PersistentAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Services\\PersistentAuthenticationStateProvider.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\PersistentAuthenticationStateProvider.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Services\\PersistentAuthenticationStateProvider.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:32:02.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Services\\LoginService.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\LoginService.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Services\\LoginService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:31:31.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FlightService.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\FlightService.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Services\\FlightService.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\FlightService.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Services\\FlightService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:30:44.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CustomAuthenticationStateProvider.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\CustomAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Services\\CustomAuthenticationStateProvider.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\CustomAuthenticationStateProvider.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Services\\CustomAuthenticationStateProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:30:20.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BusService.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\BusService.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Services\\BusService.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\BusService.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Services\\BusService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:29:46.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Services\\ApiService.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Services\\ApiService.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Services\\ApiService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAkwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:28:59.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApiClientFactory.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Helpers\\ApiClientFactory.cs",
+              "RelativeDocumentMoniker": "AuthDemo.Transport\\Helpers\\ApiClientFactory.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.Transport\\Helpers\\ApiClientFactory.cs",
+              "RelativeToolTip": "AuthDemo.Transport\\Helpers\\ApiClientFactory.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:28:37.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.SportsApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "AuthDemo.SportsApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.SportsApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "AuthDemo.SportsApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:26:43.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GameMatchController.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.SportsApi\\Controllers\\GameMatchController.cs",
+              "RelativeDocumentMoniker": "AuthDemo.SportsApi\\Controllers\\GameMatchController.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.SportsApi\\Controllers\\GameMatchController.cs",
+              "RelativeToolTip": "AuthDemo.SportsApi\\Controllers\\GameMatchController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:26:41.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\a\\AuthDemo\\AuthDemo.SportsApi\\Program.cs",
+              "RelativeDocumentMoniker": "AuthDemo.SportsApi\\Program.cs",
+              "ToolTip": "D:\\a\\AuthDemo\\AuthDemo.SportsApi\\Program.cs",
+              "RelativeToolTip": "AuthDemo.SportsApi\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwOEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:26:36.516Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

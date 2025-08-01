@@ -1,0 +1,15 @@
+@inject AuthDemo.Sports.Services.LoginService LoginService
+@inject NavigationManager Navigation
+
+<button type="button" class="nav-link btn btn-link" @onclick="Logout">
+    <span class="bi bi-person-fill-nav-menu" aria-hidden="false"></span> Logout
+</button>
+
+
+@code {
+    private void Logout()
+    {
+        Console.WriteLine("Logout button clicked");
+        Navigation.NavigateTo("/logout", forceLoad: true);
+    }
+}

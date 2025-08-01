@@ -1,0 +1,111 @@
+﻿# AuthDemo Solution
+
+## Overview
+AuthDemo is a comprehensive .NET 8 solution demonstrating modern authentication and authorization using OpenIddict and ASP.NET Core Identity. The solution includes secure communication between Blazor/Razor web applications and protected API services.
+
+## Project Structure
+
+### Client Applications
+
+#### AuthDemo.Transport (.NET 8)
+- Blazor web application for transport management
+- Features:
+  - JWT token authentication
+  - Dynamic API communication
+  - Role-based UI components
+  - Secure logout functionality
+- Key Components:
+  - `CustomAuthenticationStateProvider`: Manages user authentication state
+  - `LoginService`: Handles user authentication
+  - `ApiService`: Centralizes API communication
+  - `FlightService`, `BusService`: Domain-specific services
+
+#### AuthDemo.Sports (.NET 8)
+- Blazor web application for sports management
+- Features:
+  - User registration and authentication
+  - Protected sports data access
+  - Real-time updates
+- Key Services:
+  - `RegisterService`: Handles user registration
+  - `ApiClientFactory`: Creates configured HTTP clients
+  - Integration with sports API endpoints
+
+### API Services
+
+#### AuthDemo.Identity (.NET 8)
+- Central authentication server
+- Features:
+  - OpenIddict OAuth2/OpenID Connect implementation
+  - JWT token generation and validation
+  - User and role management
+- Configuration:
+
+#### AuthDemo.TransportApi (.NET 8)
+- Transport domain API
+- Protected Endpoints:
+  - `GET /api/flight`: Flight schedules
+  - `GET /api/bus`: Bus schedules
+  - `GET /api/test`: API health check
+- Scopes:
+  - `admin.transport.api`
+  - `manager.transport.api`
+  - `user.transport.api`
+
+#### AuthDemo.SportsApi (.NET 8)
+- Sports domain API
+- Protected Endpoints:
+  - `GET /api/gamematch`: Game schedules
+  - `GET /api/weatherforecast`: Weather data
+- Scopes:
+  - `admin.sports.api`
+  - `manager.sports.api`
+  - `user.sports.api`
+
+### Shared Components
+
+#### AuthDemo.Shared (.NET 8)
+- Common library
+- Contains:
+  - Data models
+  - DTOs
+  - Shared interfaces
+
+## Authentication & Authorization
+
+### Available Scopes
+
+#### Transport API Scopes
+
+#### Sports API Scopes
+
+### Authentication Flow
+1. User initiates login from Blazor/Razor client
+2. Identity server authenticates and issues JWT with appropriate scopes
+3. Client stores token securely
+4. APIs validate token, scopes, and audience for each request
+
+### Token Validation
+- Each API validates:
+  - Token signature
+  - Issuer (https://localhost:7214/)
+  - Audience (TransportApi or SportsApi)
+  - Required scopes
+  - Token expiration
+
+## Setup Instructions
+
+### Prerequisites
+- .NET 8 SDK
+- SQL Server (LocalDB or full instance)
+- Visual Studio 2022 or VS Code
+
+### Development Setup
+
+1. Database Setup
+
+2. Configure Connection Strings
+
+3. Start Services (in order)
+
+# Response
